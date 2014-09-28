@@ -1,0 +1,8 @@
+#!/bin/sh
+webpack --devtool source-map
+
+node_modules/.bin/uglifyjs dist/react-sortable.js \
+  --output dist/react-sortable.min.js \
+  --source-map dist/react-sortable.min.map \
+  --source-map-url react-sortable.min.map \
+  --compress warnings=false
